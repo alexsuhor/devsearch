@@ -1,1 +1,16 @@
-<h1>This is a single project</h1>
+{% include 'navbar.html' %}
+
+<h1>{{ project.title }}</h1>
+
+<hr>
+    <h2>Tags:</h2>
+    <ul>
+        {% for tag in project.tags.all %}
+            <li>{{tag}}</li>
+        {% endfor %}
+    </ul>
+<hr>
+
+<p>{{project.body}}</p>
+
+<p>{{ project.description }}</p>
